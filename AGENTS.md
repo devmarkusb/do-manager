@@ -108,15 +108,15 @@ docs/                  Engineering specs (DEVELOPMENT_SPEC.md)
 
 ## Files and directories agents must not edit without explicit approval
 
-| Path | Reason |
-| --- | --- |
-| `.env`, `.env.*` (except `.env.example`) | Secrets / local config |
-| `data/`, `*.db*` | Local runtime database |
-| `pnpm-lock.yaml` | Lockfile — only when intentionally changing dependencies |
-| `node_modules/`, `dist/`, `coverage/` | Generated / installed output |
-| `apps/api/drizzle/**` | Applied migrations — prefer `db:generate` + review; do not hand-edit applied history |
-| `.github/workflows/ci.yml` | CI/release gates |
-| `docs/DEVELOPMENT_SPEC.md` | Reverse-engineered spec — update deliberately when behavior changes |
+| Path                                     | Reason                                                                               |
+| ---------------------------------------- | ------------------------------------------------------------------------------------ |
+| `.env`, `.env.*` (except `.env.example`) | Secrets / local config                                                               |
+| `data/`, `*.db*`                         | Local runtime database                                                               |
+| `pnpm-lock.yaml`                         | Lockfile — only when intentionally changing dependencies                             |
+| `node_modules/`, `dist/`, `coverage/`    | Generated / installed output                                                         |
+| `apps/api/drizzle/**`                    | Applied migrations — prefer `db:generate` + review; do not hand-edit applied history |
+| `.github/workflows/ci.yml`               | CI/release gates                                                                     |
+| `docs/DEVELOPMENT_SPEC.md`               | Reverse-engineered spec — update deliberately when behavior changes                  |
 
 **Caution (ask first unless task requires it):** schema changes (`apps/api/src/db/schema.ts`), new env vars, auth/deployment work.
 
@@ -153,12 +153,12 @@ If the user asks to push, confirm branch/remote when ambiguous, then push once �
 
 ## Maintenance policy (for humans and agents)
 
-| Layer | Belongs here |
-| --- | --- |
-| **Global user config** | Personal preferences, MCP tokens, IDE themes |
-| **This file (`AGENTS.md`)** | Repo-wide commands, architecture, safety rules |
-| **`.cursor/rules/*.mdc`** | Cursor scoping/metadata only — not a second copy of this file |
-| **`CLAUDE.md`** | Claude entry point + Claude-only notes |
-| **Session prompt** | Task-specific intent for the current change |
+| Layer                       | Belongs here                                                  |
+| --------------------------- | ------------------------------------------------------------- |
+| **Global user config**      | Personal preferences, MCP tokens, IDE themes                  |
+| **This file (`AGENTS.md`)** | Repo-wide commands, architecture, safety rules                |
+| **`.cursor/rules/*.mdc`**   | Cursor scoping/metadata only — not a second copy of this file |
+| **`CLAUDE.md`**             | Claude entry point + Claude-only notes                        |
+| **Session prompt**          | Task-specific intent for the current change                   |
 
 Re-run AI repo setup when tooling or tree changes materially; merge updates — do not blindly replace bespoke sections.

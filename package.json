@@ -1,6 +1,7 @@
 {
   "name": "do-manager",
   "private": true,
+  "license": "MIT",
   "description": "Personal work queue manager — attention state, not task lists",
   "scripts": {
     "build": "pnpm -r build",

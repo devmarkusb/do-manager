@@ -1,6 +1,7 @@
 # do-manager
 
 [![CI](https://github.com/devmarkusb/do-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/devmarkusb/do-manager/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Personal work queue manager — attention state, not task lists.
 
@@ -105,4 +106,4 @@ See [`.env.example`](.env.example).
 
 ## License
 
-Private — all rights reserved.
+[MIT](LICENSE)
