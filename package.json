@@ -11,8 +11,8 @@
     "lint": "pnpm -r lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck"
+    "test": "pnpm --filter @do-manager/core build && pnpm -r test",
+    "typecheck": "pnpm --filter @do-manager/core build && pnpm -r typecheck"
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
