@@ -51,11 +51,12 @@ pnpm --filter @do-manager/api test
 pnpm --filter @do-manager/web test
 ```
 
-CI (`.github/workflows/ci.yml`) also runs: `pnpm format:check`, `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm build`, and `pnpm audit --prod --audit-level=high`.
+CI (`.github/workflows/ci.yml`) also runs: `pnpm check` (same as the quality job steps) and `pnpm audit --prod --audit-level=high`.
 
 ## Formatting and linting
 
 ```bash
+pnpm check                    # format:check + lint + typecheck + test + build (CI quality job)
 pnpm format                   # Prettier write
 pnpm format:check             # Prettier check (CI)
 pnpm lint                     # ESLint all packages (eslint.config.js at root)
@@ -139,6 +140,8 @@ docs/                  Engineering specs (DEVELOPMENT_SPEC.md)
 Local git is fine when the task requires it (`git status`, `git diff`, local commits **only when the user asks**). After local commits, stop and let the user review; do not push unless they clearly approve.
 
 If the user asks to push, confirm branch/remote when ambiguous, then push once — do not combine with unrelated changes.
+
+**Commit messages:** do not add `Co-authored-by`, “Generated with Cursor/Claude”, or other AI tool footer signatures.
 
 ## Review checklist before final response
 

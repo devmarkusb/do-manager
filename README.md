@@ -49,15 +49,16 @@ pnpm dev:web   # http://localhost:5173 (proxies /api to :3000)
 
 ## Commands
 
-| Command             | Description                   |
-| ------------------- | ----------------------------- |
-| `pnpm dev`          | Start API + web in parallel   |
-| `pnpm build`        | Build all packages            |
-| `pnpm test`         | Run all tests                 |
-| `pnpm lint`         | ESLint all packages           |
-| `pnpm typecheck`    | TypeScript check all packages |
-| `pnpm format`       | Format with Prettier          |
-| `pnpm format:check` | Check formatting (CI)         |
+| Command             | Description                                   |
+| ------------------- | --------------------------------------------- |
+| `pnpm dev`          | Start API + web in parallel                   |
+| `pnpm check`        | Format, lint, typecheck, test, and build (CI) |
+| `pnpm build`        | Build all packages                            |
+| `pnpm test`         | Run all tests                                 |
+| `pnpm lint`         | ESLint all packages                           |
+| `pnpm typecheck`    | TypeScript check all packages                 |
+| `pnpm format`       | Format with Prettier                          |
+| `pnpm format:check` | Check formatting (CI)                         |
 
 ### API only
 
