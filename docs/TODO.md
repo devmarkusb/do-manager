@@ -27,7 +27,7 @@ Status: `[ ]` open · `[~]` in progress · `[x]` done
 ## Platform & ops
 
 - [x] **`git init`** — Repository initialized on `main`.
-- [ ] **Push to remote + CI badge** — Replace `OWNER` in README badge URL; run GitHub Actions on `main`.
+- [x] **Push to remote + CI badge** — `devmarkusb/do-manager` on GitHub; badge URL updated in README.
 - [ ] **Production deploy topology** — How to serve web (static) + API together; `API_BASE` / reverse proxy; no Vite dev proxy in prod.
 - [ ] **Environment loading** — Consider `dotenv` or documented process-manager env for local/prod parity.
 
