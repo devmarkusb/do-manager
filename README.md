@@ -1,6 +1,6 @@
 # do-manager
 
-[![CI](https://github.com/OWNER/do-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/do-manager/actions/workflows/ci.yml)
+[![CI](https://github.com/devmarkusb/do-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/devmarkusb/do-manager/actions/workflows/ci.yml)
 
 Personal work queue manager — attention state, not task lists.
 
