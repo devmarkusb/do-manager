@@ -1,0 +1,16 @@
+---
+description: do-manager repo constraints and pointer to canonical agent docs
+alwaysApply: true
+---
+
+# do-manager
+
+Follow **`AGENTS.md`** at the repository root for commands, architecture, testing, and safety rules.
+
+**Monorepo:** `packages/core` (domain) → `apps/api` (Hono + SQLite) + `apps/web` (React). Web calls API over HTTP; do not import API code into web.
+
+**Before finishing:** run relevant checks from AGENTS.md (`pnpm test`, `pnpm typecheck`, `pnpm lint` when TS changed). Keep diffs minimal. No commits unless asked.
+
+**Do not edit without explicit approval:** `.env*`, `data/`, `pnpm-lock.yaml`, `apps/api/drizzle/**`, CI workflows, applied migration history.
+
+**Domain:** state transitions live in `packages/core/src/state-machine.ts`; API is authoritative over UI buttons.

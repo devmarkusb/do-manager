@@ -1,0 +1,15 @@
+---
+description: Database schema and migration safety for the API package
+globs: apps/api/src/db/**,apps/api/drizzle/**,apps/api/drizzle.config.ts
+alwaysApply: false
+---
+
+# Database / migrations
+
+- Schema source of truth: `apps/api/src/db/schema.ts`.
+- After schema changes: run `pnpm --filter @do-manager/api db:generate`, review output, then `db:migrate` locally.
+- **Do not hand-edit** files under `apps/api/drizzle/` unless the user explicitly requests a migration fix; prefer regenerate + review.
+- Persistence uses `@libsql/client` (file SQLite), not `better-sqlite3`.
+- Enforce domain enums in application code (Zod + repository); DB columns are plain TEXT today.
+
+See `AGENTS.md` and `docs/DEVELOPMENT_SPEC.md` §8.

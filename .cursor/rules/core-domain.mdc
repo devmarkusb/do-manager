@@ -1,0 +1,19 @@
+---
+description: Domain model and state machine changes in packages/core
+globs: packages/core/**
+alwaysApply: false
+---
+
+# Core domain
+
+`@do-manager/core` is pure TypeScript — no I/O, no framework imports.
+
+**Key exports:** `WorkItem`, `ATTENTION_STATES`, `WORK_ITEM_STATES`, `WORK_ITEM_SOURCES`, `canTransition`, `transition`.
+
+When changing states or transitions:
+
+1. Update `packages/core/src/state-machine.ts` and tests in `state-machine.test.ts`.
+2. Update API repository transition checks and Zod schemas if enums changed.
+3. Update web `nextActions()` in `apps/web/src/App.tsx` so offered buttons stay consistent (server remains authoritative).
+
+Invalid transitions must continue to fail in the repository and return HTTP **409** from the API.
