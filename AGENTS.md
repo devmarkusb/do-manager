@@ -128,6 +128,18 @@ docs/                  Engineering specs (DEVELOPMENT_SPEC.md)
 - **Do not** add MCP servers, shell hooks, or broad tool permissions to repo config by default.
 - SQLite path defaults to `./data/do-manager.db` (`DATABASE_URL`).
 
+## Git and remote operations
+
+**Never push without explicit user approval.** This includes:
+
+- `git push` (any remote or branch)
+- `git push --force`, `--force-with-lease`, or history rewrites followed by push
+- `gh repo create ... --push`, `gh pr merge`, or any command that publishes commits
+
+Local git is fine when the task requires it (`git status`, `git diff`, local commits **only when the user asks**). After local commits, stop and let the user review; do not push unless they clearly approve.
+
+If the user asks to push, confirm branch/remote when ambiguous, then push once — do not combine with unrelated changes.
+
 ## Review checklist before final response
 
 1. Domain/state changes reflected in **core → API → web** (if applicable).
@@ -137,6 +149,7 @@ docs/                  Engineering specs (DEVELOPMENT_SPEC.md)
 5. Diff stays focused; no unrelated refactors or speculative features.
 6. README or `docs/` updated only when user-facing commands or behavior changed.
 7. Git commits created **only when the user asks**.
+8. **No `git push` or remote publish** unless the user explicitly approved it in the current task.
 
 ## Maintenance policy (for humans and agents)
 

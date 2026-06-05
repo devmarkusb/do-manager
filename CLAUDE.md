@@ -8,6 +8,7 @@ Read **`AGENTS.md`** first. It is the canonical instruction set for this reposit
 - For domain/state work, read `packages/core/src/state-machine.ts` and `docs/DEVELOPMENT_SPEC.md` §3–§4 before changing API or UI transitions.
 - This repo has **no auth** and **no MCP config** by design; do not add `.mcp.json` or credential files unless explicitly requested.
 - Do not create git commits unless the user asks.
+- **Never push to GitHub or any remote without explicit user approval** (including `git push`, force-push, and `gh ... --push`).
 
 ## Quick commands
 
