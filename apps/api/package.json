@@ -1,0 +1,30 @@
+{
+  "name": "@do-manager/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "lint": "eslint src",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@do-manager/core": "workspace:*",
+    "@hono/node-server": "^1.14.4",
+    "@libsql/client": "^0.15.8",
+    "drizzle-orm": "^0.44.2",
+    "hono": "^4.7.11",
+    "zod": "^3.25.51"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "drizzle-kit": "^0.31.1",
+    "tsx": "^4.19.4",
+    "vitest": "^3.2.3"
+  }
+}

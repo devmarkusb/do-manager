@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Local env and secrets
+.env
+.env.*
+!.env.example
+
+# Local database and runtime data
+data/
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Test and coverage
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Vite / Vitest caches (outside node_modules)
+.vite/
+vitest.config.ts.timestamp-*
