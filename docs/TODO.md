@@ -8,8 +8,8 @@ Status: `[ ]` open · `[~]` in progress · `[x]` done
 
 ## Product / UX
 
-- [ ] **Waiting inbox** — Secondary view for items in `waiting` (and optionally recently promoted). Surfaces threads where async work finished and now need you (e.g. build done → deploy).
-- [ ] **Done / history view** — Browse or search completed items; today only reachable via API `GET /api/items?view=all`.
+- [x] **Waiting inbox** — Tab in web UI; lists `waiting` items via `GET /api/items?state=waiting` with resume / needs-input / done actions.
+- [x] **Done / history view** — Tab in web UI; lists `done` items via `GET /api/items?state=done` with reopen actions.
 - [ ] **Keyboard-first UI** — Quick capture, state transitions, jump to `link` without mouse.
 - [ ] **`created` state UX** — Decide if ingest creates `created` then auto-promotes to `active`, or if `created` stays API-only.
 

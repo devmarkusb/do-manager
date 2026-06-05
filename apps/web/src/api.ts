@@ -10,6 +10,13 @@ export async function fetchAttentionItems(): Promise<WorkItem[]> {
   return data.items;
 }
 
+export async function fetchItemsByState(state: WorkItemState): Promise<WorkItem[]> {
+  const response = await fetch(`${API_BASE}/api/items?state=${encodeURIComponent(state)}`);
+  if (!response.ok) throw new Error(`Failed to load ${state} items`);
+  const data = (await response.json()) as { items: WorkItem[] };
+  return data.items;
+}
+
 export async function createWorkItem(input: {
   title: string;
   source: WorkItemSource;
