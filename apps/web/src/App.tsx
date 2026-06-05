@@ -223,9 +223,7 @@ export function App() {
       </nav>
 
       <div className="toolbar">
-        <span>
-          {loading ? 'Loading…' : `${items.length} ${meta.countLabel}`}
-        </span>
+        <span>{loading ? 'Loading…' : `${items.length} ${meta.countLabel}`}</span>
         <button className="refresh" type="button" onClick={() => void load()}>
           Refresh
         </button>

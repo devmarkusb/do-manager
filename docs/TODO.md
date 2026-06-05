@@ -52,11 +52,11 @@ Status: `[ ]` open · `[~]` in progress · `[x]` done
 
 ## Reference
 
-| Doc | Use |
-| --- | --- |
+| Doc                        | Use                                                |
+| -------------------------- | -------------------------------------------------- |
 | `docs/DEVELOPMENT_SPEC.md` | As-implemented behavior, risks, open questions §14 |
-| `AGENTS.md` | Agent/workflow constraints |
-| `README.md` | Setup and command reference |
+| `AGENTS.md`                | Agent/workflow constraints                         |
+| `README.md`                | Setup and command reference                        |
 
 ---
 
