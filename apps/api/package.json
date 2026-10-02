@@ -19,7 +19,7 @@
     "@libsql/client": "^0.18.0",
     "drizzle-orm": "^0.45.2",
     "hono": "^4.7.11",
-    "zod": "^3.25.51"
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@types/node": "^26.3.0",
